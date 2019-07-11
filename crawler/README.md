@@ -20,4 +20,4 @@
 
 利用`selenium`模拟`js`事件。
 
-详细内容见：![崔庆才博客](https://cuiqingcai.com/category/technique/python)
+详细内容见：[崔庆才博客](https://cuiqingcai.com/category/technique/python)
