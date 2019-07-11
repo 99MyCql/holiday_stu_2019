@@ -13,18 +13,24 @@ res = requests.get(url, headers=headers)
 
 html = etree.HTML(res.text)
 
+# 网页f12查询元素时，右键元素可复制XPATH
+
+# /text() 获取元素的内容
 price = html.xpath('/html/body/div[3]/div/div[4]/div[2]/div[1]/div[1]/a[1]/span[1]/text()')
 print(price[0])
 
+# // 表示全局搜索
 tejia = html.xpath("//div[@class='tejia-air-wrapper']")
 print(tejia)
 
+# .// 表示对所有子元素搜索
 tejias = tejia[0].xpath('.//div[@class="tejia-air"]')
 print(tejias)
 
 for i in tejias:
     a = i.xpath('.//a')
     for j in a:
+        # 获取元素的属性
         fromto = j.xpath('./@alog-text')
         price = j.xpath('.//span[@class="tickets-price"]/text()')
         print(fromto, price)

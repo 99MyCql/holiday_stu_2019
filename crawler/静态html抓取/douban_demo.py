@@ -1,8 +1,11 @@
+'''
+抓取豆瓣静态网页，获取历届奥斯卡最佳动画长片(2002——2019)数据
+'''
 import requests
 from lxml import etree
 
+# 抓取html页面
 url = 'https://www.douban.com/doulist/1798248/'
-
 res = requests.get(url)
 res.encoding = 'utf-8'
 html = etree.HTML(res.text)
