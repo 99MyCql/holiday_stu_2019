@@ -1,5 +1,7 @@
 '''
-DataForm 二维Series构成的数据结构，相当于表格
+pandas.DataFrame 二维Series构成的数据结构，相当于表格。
+
+pandas.DataFrame 学习一：框架的部分属性和增删改查
 '''
 import pandas as pd
 import numpy as np

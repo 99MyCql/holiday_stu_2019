@@ -1,4 +1,7 @@
 .vscode/
+__pycache__/
 .ipynb_checkpoints/
 *.txt
 *.csv
+!salary.csv
+!unicorn_china.csv
