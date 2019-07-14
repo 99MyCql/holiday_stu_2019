@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form method="post">
+        <lable>用户名：</lable><input type="text" name="username"><br>
+        <lable>密码：</lable><input type="password" name="password"><br>
+        <label>确认密码：</label><input type="password" name="password2"><br>
+        <input type="submit" value="提交"><br>
+    </form>
+    {# 使用遍历获取闪现的消息 #}
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor %}
+
+</body>
+</html>

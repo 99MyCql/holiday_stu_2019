@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body style="height: 100%; margin: 0">
+        <div id="container" style="height: 100%"></div>
+        <script type="text/javascript" src="../echarts.min.js"></script>
+
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+
+        <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById("container"));
+
+            option = {
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{b}'
+                },
+                
+                series: [{
+                    name: '中国',
+                    type: 'map',
+                    mapType: 'china',
+                    selectedMode: 'single',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: true
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [{
+                            name: '北京',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '天津',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '上海',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '重庆',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '河北',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FFFDE4'
+                                }
+                            }
+                        },
+                        {
+                            name: '河南',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+
+                            name: '云南',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '辽宁',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '黑龙江',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '湖南',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D7EDFB'
+                                }
+                            }
+                        },
+                        {
+                            name: '安徽',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '山东',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '新疆',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D7EDFB'
+                                }
+                            }
+                        },
+                        {
+                            name: '江苏',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D7EDFB'
+                                }
+                            }
+                        },
+                        {
+                            name: '浙江',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '江西',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '湖北',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FFFDE4'
+                                }
+                            },
+                            selected: true
+                        },
+                        {
+                            name: '广西',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '甘肃',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FFFDE4'
+                                }
+                            }
+                        },
+                        {
+                            name: '山西',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '内蒙古',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D7EDFB'
+                                }
+                            }
+                        },
+                        {
+                            name: '陕西',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '吉林',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FFFDE4'
+                                }
+                            }
+                        },
+                        {
+                            name: '福建',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D7EDFB'
+                                }
+                            }
+                        },
+                        {
+                            name: '贵州',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FFFDE4'
+                                }
+                            }
+                        },
+                        {
+                            name: '广东',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '青海',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '西藏',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FFFDE4'
+                                }
+                            }
+                        },
+                        {
+                            name: '四川',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9EDE1'
+                                }
+                            }
+                        },
+                        {
+                            name: '宁夏',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '海南',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '台湾',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FBE0EC'
+                                }
+                            }
+                        },
+                        {
+                            name: '香港',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '澳门',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        },
+                        {
+                            name: '南海诸岛',
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#FCE1D8'
+                                }
+                            }
+                        }
+                    ]
+                }]
+            };
+
+            myChart.setOption(option, true);
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,121 @@
+<html>
+	<head>
+	    <!-- 引入jquery.js -->
+	    <script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main_line" style="height:400px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line',
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main_line'));
+
+                var option = {
+
+                    title: {
+                        text: '折线图堆叠'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data:[]
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: []
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name:'邮件营销',
+                            type:'line',
+                            stack: '总量',
+                            data:[]
+                        },
+                        {
+                            name:'联盟广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[]
+                        },
+                        {
+                            name:'视频广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[]
+                        },
+                        {
+                            name:'直接访问',
+                            type:'line',
+                            stack: '总量',
+                            data:[]
+                        },
+                        {
+                            name:'搜索引擎',
+                            type:'line',
+                            stack: '总量',
+                            data:[]
+                        }
+                    ]
+                };
+
+                // 为echarts对象加载数据
+                $.ajax({
+                     type: "GET",
+                     url: "http://127.0.0.1:5000/listApi",
+                     dataType: "json",
+                     success: function(data){
+                                option['legend']['data'] = data['legend']
+                                option['xAxis']['data'] = data['xAxis']
+                                option['series'][0]['data'] = data['data_list'][0]
+                                option['series'][1]['data'] = data['data_list'][1]
+                                option['series'][2]['data'] = data['data_list'][2]
+                                option['series'][3]['data'] = data['data_list'][3]
+                                option['series'][4]['data'] = data['data_list'][4]
+                                // 为echarts对象加载数据
+                                myChart.setOption(option);
+                              }
+                    });
+
+            }
+        );
+    </script>
+
+</body>
+</html>
