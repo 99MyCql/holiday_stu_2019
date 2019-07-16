@@ -1,3 +1,6 @@
+'''
+线性回归。根据离散数据得出函数方程，从而可以根据下一个"x"值估计"f(x)"值
+'''
 import matplotlib.pyplot as plt
 
 plt.rcParams['font.sans-serif'] = ['Microsoft YaHei'] # 指定默认字体

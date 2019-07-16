@@ -6,4 +6,6 @@
 
 - Flask and Echarts
 
-- sklearn_01 线性回归 + 逻辑回归。有疑惑？？？
+- sklearn_01 线性回归 + 逻辑回归 ？？？
+
+- sklearn_02 决策树 + 集成学习 + 聚类分析

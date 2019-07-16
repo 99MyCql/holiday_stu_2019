@@ -44,3 +44,6 @@ a4[0][0] = 0
 print(a4)
 print(a4[:, 2]) # 第二列
 print(a4[0:2, 0:2]) # 前两行，前两列
+
+print(a4.min(axis=1)) # axis=1 行
+print(a4.min(axis=0)) # axis=0 列
