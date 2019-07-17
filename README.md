@@ -6,6 +6,8 @@
 
 - Flask and Echarts
 
-- sklearn_01 线性回归 + 逻辑回归 ？？？
+- sklearn_01 线性回归 + 逻辑回归
 
-- sklearn_02 决策树 + 集成学习 + 聚类分析
+- sklearn_02 决策树 + 集成学习() + 聚类分析 + k-邻近法 + 支持向量机(SVM)
+
+- sklearn_03 模型评估指标 + 数据预处理 + 交叉验证 + 模型调参

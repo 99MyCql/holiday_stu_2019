@@ -3,6 +3,7 @@ __pycache__/
 .ipynb_checkpoints/
 *.txt
 *.csv
-!data.csv
+!*data.csv
 !salary.csv
 !unicorn_china.csv
+!Advertising.csv
