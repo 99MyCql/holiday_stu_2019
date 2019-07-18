@@ -2,9 +2,12 @@
 __pycache__/
 .ipynb_checkpoints/
 *.txt
+!building_event_binary.txt
 *.csv
 !*data.csv
 !salary.csv
 !unicorn_china.csv
 !Advertising.csv
 !train_modified.csv
+!building_event_binary.csv
+*.pkl
