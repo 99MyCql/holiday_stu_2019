@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+scikit-learn = "*"
+pandas = "*"
+jupyter-core = "*"
+jupyter-client = "*"
+ipykernel = "*"
+scipy = "*"
+python-levenshtein = "*"
+simplejson = "*"
+numpy = "*"
+ipdb = "*"
+pytest = "*"
+isort = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"

@@ -1,0 +1,217 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "e82fe05cc1495aee3692dbd915cbd5e7ba30d695a854336997ba68c88abf93ce"
+        },
+        "host-environment-markers": {
+            "implementation_name": "cpython",
+            "implementation_version": "0",
+            "os_name": "posix",
+            "platform_machine": "x86_64",
+            "platform_python_implementation": "CPython",
+            "platform_release": "17.5.0",
+            "platform_system": "Darwin",
+            "platform_version": "Darwin Kernel Version 17.5.0: Fri Apr 13 19:32:32 PDT 2018; root:xnu-4570.51.2~1/RELEASE_X86_64",
+            "python_full_version": "2.7.10",
+            "python_version": "2.7",
+            "sys_platform": "darwin"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "appnope": {
+            "hashes": [],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==0.1.0"
+        },
+        "atomicwrites": {
+            "hashes": [],
+            "version": "==1.2.1"
+        },
+        "attrs": {
+            "hashes": [],
+            "version": "==18.2.0"
+        },
+        "backports.shutil-get-terminal-size": {
+            "hashes": [],
+            "markers": "python_version == '2.7'",
+            "version": "==1.0.0"
+        },
+        "click": {
+            "hashes": [],
+            "version": "==7.0"
+        },
+        "decorator": {
+            "hashes": [],
+            "version": "==4.3.0"
+        },
+        "enum34": {
+            "hashes": [],
+            "markers": "python_version == '2.7'",
+            "version": "==1.1.6"
+        },
+        "flask": {
+            "hashes": [],
+            "version": "==1.0.2"
+        },
+        "funcsigs": {
+            "hashes": [],
+            "markers": "python_version < '3.0'",
+            "version": "==1.0.2"
+        },
+        "ipdb": {
+            "hashes": [],
+            "version": "==0.11"
+        },
+        "ipykernel": {
+            "hashes": [],
+            "version": "==4.10.0"
+        },
+        "ipython": {
+            "hashes": [],
+            "version": "==5.8.0"
+        },
+        "ipython-genutils": {
+            "hashes": [],
+            "version": "==0.2.0"
+        },
+        "itsdangerous": {
+            "hashes": [],
+            "version": "==0.24"
+        },
+        "jinja2": {
+            "hashes": [],
+            "version": "==2.10"
+        },
+        "jupyter-client": {
+            "hashes": [],
+            "version": "==5.2.3"
+        },
+        "jupyter-core": {
+            "hashes": [],
+            "version": "==4.4.0"
+        },
+        "markupsafe": {
+            "hashes": [],
+            "version": "==1.0"
+        },
+        "more-itertools": {
+            "hashes": [],
+            "version": "==4.3.0"
+        },
+        "numpy": {
+            "hashes": [],
+            "version": "==1.15.2"
+        },
+        "pandas": {
+            "hashes": [],
+            "version": "==0.23.4"
+        },
+        "pathlib2": {
+            "hashes": [],
+            "markers": "python_version in '2.6 2.7 3.2 3.3'",
+            "version": "==2.3.2"
+        },
+        "pexpect": {
+            "hashes": [],
+            "markers": "sys_platform != 'win32'",
+            "version": "==4.6.0"
+        },
+        "pickleshare": {
+            "hashes": [],
+            "version": "==0.7.5"
+        },
+        "pluggy": {
+            "hashes": [],
+            "version": "==0.7.1"
+        },
+        "prompt-toolkit": {
+            "hashes": [],
+            "version": "==1.0.15"
+        },
+        "ptyprocess": {
+            "hashes": [],
+            "version": "==0.6.0"
+        },
+        "py": {
+            "hashes": [],
+            "version": "==1.6.0"
+        },
+        "pygments": {
+            "hashes": [],
+            "version": "==2.2.0"
+        },
+        "pytest": {
+            "hashes": [],
+            "version": "==3.8.1"
+        },
+        "python-dateutil": {
+            "hashes": [],
+            "version": "==2.7.3"
+        },
+        "python-levenshtein": {
+            "hashes": [],
+            "version": "==0.12.0"
+        },
+        "pytz": {
+            "hashes": [],
+            "version": "==2018.5"
+        },
+        "pyzmq": {
+            "hashes": [],
+            "version": "==17.1.2"
+        },
+        "scandir": {
+            "hashes": [],
+            "markers": "python_version < '3.5'",
+            "version": "==1.9.0"
+        },
+        "scikit-learn": {
+            "hashes": [],
+            "version": "==0.20.0"
+        },
+        "scipy": {
+            "hashes": [],
+            "version": "==1.1.0"
+        },
+        "simplegeneric": {
+            "hashes": [],
+            "version": "==0.8.1"
+        },
+        "simplejson": {
+            "hashes": [],
+            "version": "==3.16.0"
+        },
+        "six": {
+            "hashes": [],
+            "version": "==1.11.0"
+        },
+        "tornado": {
+            "hashes": [],
+            "version": "==5.1.1"
+        },
+        "traitlets": {
+            "hashes": [],
+            "version": "==4.3.2"
+        },
+        "wcwidth": {
+            "hashes": [],
+            "version": "==0.1.7"
+        },
+        "werkzeug": {
+            "hashes": [],
+            "version": "==0.14.1"
+        }
+    },
+    "develop": {}
+}

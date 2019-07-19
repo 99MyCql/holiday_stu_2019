@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鸢尾花分类</title>
+</head>
+<body>
+{% if name %}
+    {{ name }}
+{% else %}
+    <form method="post" action="predict">
+        sepalLength: <input type="text" name="sepalLength">
+        <button type="submit">预测</button>
+    </form>
+    <form method="GET" action="pause">
+        <button type="submit">暂停</button>
+    </form>
+{% endif %}
+</body>
+</html>
