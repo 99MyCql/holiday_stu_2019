@@ -19,7 +19,7 @@
     - k-邻近法
     - 支持向量机(SVM)
 
-- [sklearn_03](./sklearn_03/stu_and_demo/README.md)
+- [sklearn_03](./sklearn_03/README.md)
 
     - 模型评估指标(sklearn.metrics)
     - 数据预处理(sklearn.preprocessing)
@@ -27,3 +27,7 @@
     - 模型调参(sklearn.model_selection)
 
 - sklearn_04 数据处理案例和练习
+
+- sklearn_05 机器学习与flask的结合
+
+- deep_learing_01
