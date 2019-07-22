@@ -2,11 +2,13 @@
 __pycache__/
 .ipynb_checkpoints/
 mylogs/
+logs/
 *.txt
 !building_event_binary.txt
 !requirements.txt
 *.csv
-!*data*.csv
+data_stocks.csv
+!data.csv
 !train.csv
 !test.csv
 !salary.csv
@@ -15,4 +17,5 @@ mylogs/
 !train_modified.csv
 !building_event_binary.csv
 !gender_submission.csv
+!gender.csv
 random_forest_train_model.pkl

@@ -45,5 +45,24 @@ print(a4)
 print(a4[:, 2]) # 第二列
 print(a4[0:2, 0:2]) # 前两行，前两列
 
+# 数理统计
 print(a4.min(axis=0)) # axis=0 列
 print(a4.min(axis=1)) # axis=1 行
+
+# 创建全0、全1数组
+y1 = np.zeros((119,1)) # 创建(119,1)全0数组
+y1temp = np.ones((119,1))
+y2 = np.ones((215,1))    # 创建(215,1)全0数组
+y2temp = np.zeros((215,1))
+
+# 合并
+y1 = np.hstack((y1temp,y1)) # 水平方向上合并 (119,1) + (119,1) = (119,2)
+y2 = np.hstack((y2temp,y2))
+Y = np.vstack((y1,y2)) # 垂直方向上合并 (215,2) + (119,2) = (334,2)
+
+# 删除一列或多列
+arr = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
+np.delete(arr, [1,2], axis=1)
+array([[ 1,  4],
+       [ 5,  8],
+       [ 9, 12]])

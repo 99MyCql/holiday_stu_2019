@@ -120,13 +120,74 @@ le.fit([1, 2, 2, 6]) # 1编码为0，2编码为1，6编码为2
 le.transform([1, 1, 2, 6]) #array([0, 0, 1, 2])
 ```
 
-### 3.4. 其它
+### 3.4. 类别特征编码(OneHotEncoder独热编码)
 
-- 最小-最大规范化
+对于某个**特征**，有多少个类别就分配多少个比特位。每个类别对应一个比特位，当该特征属于某个类别时，就将对应比特位设置为`1`。
+
+例如，某颜色特征有三个类别红、黄、蓝：
+
+- 如果用标签编码，则是 红=1，黄=2，蓝=3
+
+- 如果用`OneHot`编码，则是 红色：1 0 0 ，黄色: 0 1 0，蓝色：0 0 1，如此编码方便类别的区分
+
+`OneHot`示例：
+
+```py
+from sklearn.preprocessing import  OneHotEncoder
+
+enc = OneHotEncoder()
+enc.fit([[0, 0, 3],
+         [1, 1, 0],
+         [0, 2, 1],
+         [1, 0, 2]])
+
+ans = enc.transform([[0, 1, 3]]).toarray()  # 如果不加 toarray() 的话，输出的是稀疏的存储格式，即索引加值的形式，也可以通过参数指定 sparse = False 来达到同样的效果
+print(ans) # 输出 [[ 1.  0.  0.  1.  0.  0.  0.  0.  1.]]
+```
+
+对于输入数组，这依旧是把每一行当作一个样本，每一列当作一个特征：
+
+- 我们先来看第一个特征，即第一列 [0,1,0,1]，也就是说它有两个取值 0 或者 1，那么 one-hot 就会使用两位来表示这个特征，[1,0] 表示 0， [0,1] 表示 1，在上例输出结果中的前两位 [1,0...] 也就是表示该特征为 0
+
+- 第二个特征，第二列 [0,1,2,0]，它有三种值，那么 one-hot 就会使用三位来表示这个特征，[1,0,0] 表示 0，[0,1,0] 表示 1，[0,0,1] 表示 2，在上例输出结果中的第三位到第六位 [...0,1,0,0...] 也就是表示该特征为 1
+
+- 第三个特征，第三列 [3,0,1,2]，它有四种值，那么 one-hot 就会使用四位来表示这个特征，[1,0,0,0] 表示 0， [0,1,0,0] 表示 1，[0,0,1,0] 表示 2，[0,0,0,1] 表示 3，在上例输出结果中的最后四位 [...0,0,0,1] 也就是表示该特征为 3
+
+参考[scikit-learn 中 OneHotEncoder 解析](https://www.cnblogs.com/zhoukui/p/9159909.html)
+
+另外，对于`DataForm`结构，可以直接调用`panda.get_dummies()`函数进行`one-hot`编码。
+
+参考[特征提取之pd.get_dummies()](https://www.jianshu.com/p/5f8782bf15b1)
+
+`OneHot`编码在**神经网络**中用处很大。
+
+### 3.5. 最小-最大规范化 MaxAbsScaler
+
+数据会被规模化到[-1,1]之间（也可以是其他固定最小最大值的区间）。
+
+示例：
+
+```py
+# 在MinMaxScaler中是给定了一个明确的最大值与最小值。它的计算公式如下：
+# X_std = (X - X.min(axis=0)) / (X.max(axis=0) - X.min(axis=0))
+# X_scaled = X_std / (max - min) + min
+
+from sklearn.preprocessing import MinMaxScaler
+
+x = np.array([[1., -1., 2.],
+              [2., 0., 0.],
+              [0., 1., -1.]])
+
+min_max_scaler = MinMaxScaler()
+x_minmax = min_max_scaler.fit_transform(x)
+x_minmax
+```
+
+最大最小规范化在**神经网络**中用处很大。
+
+### 3.6. 其它
 
 - 归一化
-
-- 类别特征编码(OneHotEncoder独热编码)
 
 更多详情见 [stu_03.py](stu_and_demo/stu_03.py) 和 [数据预处理.ipynb](数据预处理.ipynb)
 

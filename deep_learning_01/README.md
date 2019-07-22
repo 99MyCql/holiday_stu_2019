@@ -122,4 +122,93 @@ y = a = h(a) = WX + B
 
 ### 2.1. 回归问题
 
-参考 [1-简单示例-tensorflow结构.ipynb](1-简单示例-tensorflow结构.ipynb), [2-非线性回归.ipynb](2-非线性回归.ipynb), [3-建造我们第一个神经网络.ipynb](3-建造我们第一个神经网络.ipynb)
+详情：
+
+- [1-简单示例-tensorflow结构.ipynb](1-简单示例-tensorflow结构.ipynb)
+
+- [2-非线性回归.ipynb](2-非线性回归.ipynb)
+
+- [3-建造我们第一个神经网络.ipynb](3-建造我们第一个神经网络.ipynb)
+
+使用 `Tensorflow` 解决回归问题的大致过程分为：
+
+1. 数据预处理
+
+    - 最小-最大规范化 `MaxAbsScaler` 将**值数据**缩放到 `[-1, 1]`之间
+
+    - 对于**类别数据**可以用 `OneHot` 编码
+
+2. 模型创建
+
+    - 创建 x, y 占位符
+
+    - 创建神经网络
+
+    - 回归问题，损失函数用**二次代阶函数**
+
+    ```py
+    loss = tf.reduce_mean(tf.square(y - prediction))
+    ```
+
+    - 定义训练优化器：
+
+    ```py
+    # 梯度下降法
+    train = tf.train.GradientDescentOptimizer(lr).minimize(loss)
+    # 或 tf.train.AdamOptimizer(lr).minimize(loss) 等等
+    ```
+
+3. 模型训练
+
+    - 初始化 `Tensorflow` 全局变量
+
+    - 创建并启动会话
+
+    - 进行训练
+
+    - 获取预测值
+
+更多详细过程见：
+
+- [房价预测 - 回归问题](homework/homework1.ipynb)
+
+- [共享单车预测 - 回归问题](homework/homework3.ipynb)
+
+### 2.2. 分类问题
+
+详情：
+
+- [4-MNIST数据集分类简单版本.ipynb](4-MNIST数据集分类简单版本.ipynb)
+
+- [5-MNIST数据集分类优化.ipynb](5-MNIST数据集分类优化.ipynb)
+
+解决分类问题的大致过程：
+
+1. 数据预处理。与回归问题大致相同，不同的是分类问题必须对 `Y` 数据进行 `OneHot`编码。
+
+2. 模型创建。相比于回归：
+
+    - 损失函数用交叉熵
+
+    ```py
+    loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels = y, logits = prediction))
+    ```
+
+    - 还需要定义准确率：
+
+    ```py
+    correct_prediction = tf.equal(tf.argmax(y,1),tf.argmax(prediction,1)) # argmax 返回一维张量中最大值(one-hot编码后，每行只有0和1)的所以在位置
+    # cast 把布尔型列表转换为float32， 如[true.true.false] = [1,1,0] ，那么准确率的值即为66.6%
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
+    ```
+
+3. 模型训练。最后还需要求准确率：
+
+    ```py
+    # 用测试集的图片及标签求得准确率
+    acc = sess.run(accuracy, feed_dict={x: x_data, y: y_data})
+    ```
+
+更多详细过程见：
+
+- [事件预测 - 分类问题](homework/homework2.ipynb)
