@@ -39,7 +39,7 @@ writer=tf.summary.FileWriter('/path/to/logs/', tf.get_default_graph())
 2. 保存日志文件
 
 ```py
-writer.close() 
+writer.close()
 ```
 
 3. 运行可视化命令，启动服务

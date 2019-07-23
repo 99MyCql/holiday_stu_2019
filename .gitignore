@@ -3,6 +3,7 @@ __pycache__/
 .ipynb_checkpoints/
 mylogs/
 logs/
+datasets/
 *.txt
 !building_event_binary.txt
 !requirements.txt
@@ -19,3 +20,4 @@ data_stocks.csv
 !gender_submission.csv
 !gender.csv
 random_forest_train_model.pkl
+datasets.zip

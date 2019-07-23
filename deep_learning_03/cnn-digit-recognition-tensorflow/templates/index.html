@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="utf-8">
+    <title>CNN Digit Recognition </title>
+</head>
+
+<body>
+    <p class="title common">CNN Digit Recognition using TensorFlow<br/>
+        with auto-centering input image.</p>
+    <div class="common">
+        CNN Digit Recognition
+        <br/>
+        created by NUAA
+        </br>
+    </div>
+    <br/>
+    <div class="common">
+        <div class="boxitem">
+            <canvas id="inputimg" width="196" height="196"></canvas>
+            <button id="clearbtn">Clear</button>
+        </div>
+        <!--<canvas id="detectimg" width="98" height="98" style="border: solid 1px black"></canvas>-->
+        <!--<canvas id="centerimg" width="98" height="98" style="border: solid 1px black"></canvas>-->
+        <div class="boxitem">
+            <div id="predictdigit">0</div>
+            <div id="probStr">Probability : </div>
+        </div>
+        <div class="boxitem">
+            <svg id="probGraph" width="250" height="196"></svg>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/d3.min.js') }}"></script>
+    <!--
+    <script src="static/js/jquery-3.3.1.min.js"></script>   
+    <script src="static/js/d3.min.js"></script>
+    -->
+</body>

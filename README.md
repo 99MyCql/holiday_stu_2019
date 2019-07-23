@@ -30,6 +30,8 @@
 
 - sklearn_05 机器学习与flask的结合
 
-- [deep_learing_01](deep_learning_01/README.md)
+- [deep_learning_01](deep_learning_01/README.md)
 
-- [deep_learing_02](deep_learning_02/README.md)
+- [deep_learning_02](deep_learning_02/README.md)
+
+- [deep_learning_03](deep_learning_03/README.md)
