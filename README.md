@@ -35,3 +35,7 @@
 - [deep_learning_02](deep_learning_02/README.md)
 
 - [deep_learning_03](deep_learning_03/README.md)
+
+- deep_learning_04 对抗神经网络
+
+- deep_learning_05 Keras
