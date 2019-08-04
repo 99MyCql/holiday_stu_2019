@@ -39,3 +39,5 @@
 - deep_learning_04 对抗神经网络
 
 - deep_learning_05 Keras
+
+- NLP
