@@ -30,11 +30,11 @@
 
 - sklearn_05 机器学习与flask的结合
 
-- [deep_learning_01](deep_learning_01/README.md)
+- [deep_learning_01](deep_learning_01/README.md) 神经网络入门
 
-- [deep_learning_02](deep_learning_02/README.md)
+- [deep_learning_02](deep_learning_02/README.md) 神经网络案例分析
 
-- [deep_learning_03](deep_learning_03/README.md)
+- [deep_learning_03](deep_learning_03/README.md) 卷积神经网络
 
 - deep_learning_04 对抗神经网络
 
