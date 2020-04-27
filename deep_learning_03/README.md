@@ -42,11 +42,11 @@
 
 假设有一个 5x5 的图像(深度暂略)，使用一个 3x3 的filter进行卷积，想得到一个 3x3 的Feature Map，如下所示：
 
-![1](images\readme1.png)
+![1](./images/readme1.png)
 
 其运算过程为：
 
-![2](images\readme2.gif)
+![2](./images/readme2.gif)
 
 该过程中，长宽方向的**步幅**都为1，即长宽方向每次移动一格。
 
@@ -58,7 +58,7 @@
 
 再假设输入一张 5x5x3 的图片，采用两个 3x3x3 的卷积核进行运算，并对图片外围增加一圈0变成 7x7x3 ，如下：
 
-![3](images\readme3.gif)
+![3](./images/readme3.gif)
 
 运算过程的**步幅**为2，最终**输出是一个三维结构(类似于输出一张图片)**，长宽为3(步幅为2，长宽只够运算三次)，深度为2(该层有两个卷积核)。
 
@@ -72,7 +72,7 @@
 
 池化的方法很多，最常用的是Max Pooling。Max Pooling实际上就是在 **NxN 的样本**中**取最大值**，作为采样后的样本值。下图是 2x2 max pooling：
 
-![4](images\readme4.png)
+![4](./images/readme4.png)
 
 除了Max Pooing之外，常用的还有 Mean Pooling (取各样本的平均值)。
 

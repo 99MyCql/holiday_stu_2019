@@ -45,7 +45,7 @@ writer.close()
 3. 运行可视化命令，启动服务
 
 ```bash
-tensorboard –logdir /path/to/logs/
+tensorboard –-logdir=/path/to/logs/
 ```
 
 ## 4. 模型保存
